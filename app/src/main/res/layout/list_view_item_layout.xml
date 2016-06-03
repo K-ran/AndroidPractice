@@ -4,12 +4,14 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
           android:id="@+id/label"
           android:gravity="left"
-          android:textColor="#6C7A89"
+          android:textColor="@color/textColor"
           android:typeface="serif"
           android:layout_width="fill_parent"
           android:layout_height="fill_parent"
           android:padding="4dip"
+          android:elevation="5dp"
           android:text="Item"
           android:textSize="30sp"
           android:textStyle="bold" >
+
 </TextView>

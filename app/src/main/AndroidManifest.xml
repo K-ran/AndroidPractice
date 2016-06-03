@@ -29,6 +29,8 @@
         </activity>
         <activity android:name=".gridViewPractice.PracticeGridView">
         </activity>
+        <activity android:name=".expandableListViewPractive.PracticeExpandableList">
+        </activity>
     </application>
 
 </manifest>
