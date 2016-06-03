@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:gravity="center_horizontal"
+    tools:context=".layoutPractice.PractiveRelativeLayout">
+    
+    <Button
+        android:id="@+id/btnOne"
+        android:layout_width="100dp"
+        android:text="Button1"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnTwo"
+        android:layout_width="100dp"
+        android:text="Button2"
+        android:layout_below="@id/btnOne"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/btnOne"/>
+
+    <Button
+        android:id="@+id/btnThree"
+        android:layout_width="100dp"
+        android:text="Button3"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/btnOne"
+        android:layout_toEndOf="@+id/btnTwo"/>
+
+    <TextView
+        android:id="@+id/tb1"
+        android:text="This is a text Box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnTwo"
+        android:layout_toEndOf="@+id/btnOne"
+        android:layout_marginTop="0dp"/>
+
+    <Button
+        android:id="@+id/btnFour"
+        android:text="Button 4"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+    <Button
+        android:id="@+id/btnFive"
+        android:text="Button 5"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btnFour"
+        android:layout_above="@id/btnFour"
+        />
+
+    <Button
+        android:id="@+id/btnSix"
+        android:text="Button6"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btnFive"
+        android:layout_below="@id/btnFive"
+        />
+
+
+
+</RelativeLayout>
