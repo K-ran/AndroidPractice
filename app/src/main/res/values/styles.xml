@@ -8,4 +8,23 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="MyAppTheme" parent="AppTheme">
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:colorBackgroundCacheHint">@color/window_background</item>
+    </style>
+
+    <style name="myListTextBoxStyle">
+        <item name="android:textSize">@dimen/text_size_list</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:padding">@dimen/text_padding</item>
+        <item name="android:opacity">translucent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+    <style name="myButtonStyle">
+        <item name="android:background">@drawable/custom_button</item>
+        <item name="android:layout_margin">3dp</item>
+    </style>
 </resources>

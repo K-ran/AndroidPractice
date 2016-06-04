@@ -7,8 +7,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".layoutPractice.PracticeLinearLauoyt">
+        android:theme="@style/MyAppTheme">
+        <activity android:name=".layoutPractice.PracticeLinearLauoyt" >
         </activity>
         <activity android:name=".launcherActivity.PracticeList">
             <intent-filter>
@@ -30,6 +30,8 @@
         <activity android:name=".gridViewPractice.PracticeGridView">
         </activity>
         <activity android:name=".expandableListViewPractive.PracticeExpandableList">
+        </activity>
+        <activity android:name=".CustomStylePractice.PracticeCustomStyle">
         </activity>
     </application>
 

@@ -33,39 +33,43 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_marginBottom="0dp"
-            android:layout_height="wrap_content">
+            android:layout_height="0dp">
 
             <Button
+                style="@style/myButtonStyle"
                 android:id="@+id/btn7"
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:text="7"
                 android:onClick="digitPressed"
                 android:textSize="@dimen/text_size"
                 android:layout_height="match_parent"/>
 
             <Button
+                style="@style/myButtonStyle"
                 android:id="@+id/btn8"
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:text="8"
                 android:onClick="digitPressed"
                 android:textSize="@dimen/text_size"
                 android:layout_height="match_parent"/>
 
             <Button
+                style="@style/myButtonStyle"
                 android:id="@+id/btn9"
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:text="9"
                 android:onClick="digitPressed"
                 android:textSize="@dimen/text_size"
                 android:layout_height="match_parent"/>
 
             <Button
+                style="@style/myButtonStyle"
                 android:id="@+id/btnMin"
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:text="-"
                 android:onClick="functionPressed"
                 android:textSize="@dimen/text_size"
@@ -79,12 +83,13 @@
             android:weightSum="4"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="0dp">
 
             <Button
                 android:id="@+id/btn4"
+                style="@style/myButtonStyle"
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:text="4"
                 android:onClick="digitPressed"
                 android:textSize="@dimen/text_size"
@@ -92,8 +97,9 @@
 
             <Button
                 android:id="@+id/btn5"
+               style="@style/myButtonStyle"
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:text="5"
                 android:onClick="digitPressed"
                 android:textSize="@dimen/text_size"
@@ -101,17 +107,19 @@
 
             <Button
                 android:id="@+id/btn6"
+               style="@style/myButtonStyle"
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:text="6"
                 android:onClick="digitPressed"
                 android:textSize="@dimen/text_size"
                 android:layout_height="match_parent"/>
 
             <Button
+               style="@style/myButtonStyle"
                 android:id="@+id/btnPlus"
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:text="+"
                 android:onClick="functionPressed"
                 android:textSize="@dimen/text_size"
@@ -125,39 +133,43 @@
             android:weightSum="4"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="0dp">
 
             <Button
                 android:id="@+id/btn"
+               style="@style/myButtonStyle"
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:text="1"
                 android:onClick="digitPressed"
                 android:textSize="@dimen/text_size"
                 android:layout_height="match_parent"/>
 
             <Button
+               style="@style/myButtonStyle"
                 android:id="@+id/btn2"
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:text="2"
                 android:onClick="digitPressed"
                 android:textSize="@dimen/text_size"
                 android:layout_height="match_parent"/>
 
             <Button
+               style="@style/myButtonStyle"
                 android:id="@+id/btn3"
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:text="3"
                 android:onClick="digitPressed"
                 android:textSize="@dimen/text_size"
                 android:layout_height="match_parent"/>
 
             <Button
+               style="@style/myButtonStyle"
                 android:id="@+id/btnDiv"
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:text="/"
                 android:onClick="functionPressed"
                 android:textSize="@dimen/text_size"
@@ -171,39 +183,43 @@
             android:weightSum="4"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="0dp">
 
             <Button
+               style="@style/myButtonStyle"
                 android:id="@+id/btnDecimal"
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:text="."
                 android:onClick="digitPressed"
                 android:textSize="@dimen/text_size"
                 android:layout_height="match_parent"/>
 
             <Button
+               style="@style/myButtonStyle"
                 android:id="@+id/btn0"
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:text="0"
                 android:onClick="digitPressed"
                 android:textSize="@dimen/text_size"
                 android:layout_height="match_parent"/>
 
             <Button
+               style="@style/myButtonStyle"
                 android:id="@+id/btnEqual"
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:text="="
                 android:onClick="functionPressed"
                 android:textSize="@dimen/text_size"
                 android:layout_height="match_parent"/>
 
             <Button
+               style="@style/myButtonStyle"
                 android:id="@+id/btnMul"
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:text="X"
                 android:onClick="functionPressed"
                 android:textSize="@dimen/text_size"

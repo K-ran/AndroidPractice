@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import ankita.myapplication.CustomStylePractice.PracticeCustomStyle;
 import ankita.myapplication.customList.PracticeCustomListView;
 import ankita.myapplication.expandableListViewPractive.PracticeExpandableList;
 import ankita.myapplication.gridViewPractice.PracticeGridView;
@@ -21,9 +22,9 @@ import ankita.myapplication.R;
 public class PracticeList extends AppCompatActivity {
 
     String[] mobileArray = {"Linear Layout","Relative Layout","FrameLayout","UI Controls",
-                            "CustomListView","Grid View","Expandable List"};
+                            "CustomListView","Grid View","Expandable List","Custom Style"};
     Class[] activities = {PracticeLinearLauoyt.class, PractiveRelativeLayout.class, PractiveFrameLayout.class,PracticeUiControls.class,
-                          PracticeCustomListView.class, PracticeGridView.class, PracticeExpandableList.class};
+                          PracticeCustomListView.class, PracticeGridView.class, PracticeExpandableList.class, PracticeCustomStyle.class};
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         // Array of strings...
