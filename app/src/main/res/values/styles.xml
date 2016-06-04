@@ -8,9 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="MyAppTheme" parent="AppTheme">
-        <item name="android:windowBackground">@color/window_background</item>
-        <item name="android:colorBackgroundCacheHint">@color/window_background</item>
+    <style name="MyAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/customWhite</item>
+        <item name="android:colorBackgroundCacheHint">@color/customWhite</item>
+
     </style>
 
     <style name="myListTextBoxStyle">
@@ -26,5 +27,14 @@
     <style name="myButtonStyle">
         <item name="android:background">@drawable/custom_button</item>
         <item name="android:layout_margin">3dp</item>
+    </style>
+
+    <style name="iphone_style">
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:background">@drawable/iphone_button</item>
+    </style>
+    <style name="iphone_style.iphone_style_button">
+        <item name="android:textColor">@color/green</item>
     </style>
 </resources>
