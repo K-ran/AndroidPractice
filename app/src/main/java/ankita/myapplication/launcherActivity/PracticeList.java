@@ -9,7 +9,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import ankita.myapplication.BroadcastRecieverPratice.PractiveBroadcastReciever;
 import ankita.myapplication.CustomStylePractice.PracticeCustomStyle;
+import ankita.myapplication.IntentPractice.PracticeImplicitIntent;
 import ankita.myapplication.ServicesPractice.PracticeServices;
 import ankita.myapplication.UiTask1Practice.PracticeUiTask1;
 import ankita.myapplication.customList.PracticeCustomListView;
@@ -25,10 +27,10 @@ public class PracticeList extends AppCompatActivity {
 
     String[] mobileArray = {"Linear Layout","Relative Layout","FrameLayout","UI Controls",
                             "CustomListView","Grid View","Expandable List","Custom Style",
-                            "Ui Task 1","Services "};
+                            "Ui Task 1","Services ","Broadcast Reciever","Implicit Intent"};
     Class[] activities = {PracticeLinearLauoyt.class, PractiveRelativeLayout.class, PractiveFrameLayout.class,PracticeUiControls.class,
                           PracticeCustomListView.class, PracticeGridView.class, PracticeExpandableList.class, PracticeCustomStyle.class,
-                          PracticeUiTask1.class, PracticeServices.class};
+                          PracticeUiTask1.class, PracticeServices.class, PractiveBroadcastReciever.class, PracticeImplicitIntent.class};
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         // Array of strings...

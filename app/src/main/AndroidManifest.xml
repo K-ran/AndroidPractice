@@ -43,11 +43,23 @@
         <activity android:name=".ServicesPractice.PracticeServices">
         </activity>
 
-        <service
-            android:name=".ServicesPractice.MyService"
-            android:enabled="true"
-            android:exported="true">
+        <service android:name=".ServicesPractice.MyService">
         </service>
+        <service
+            android:name=".ServicesPractice.MyIntentService"
+            android:exported="false">
+        </service>
+
+        <activity android:name=".BroadcastRecieverPratice.PractiveBroadcastReciever">
+        </activity>
+
+        <!-- <receiver android:name=".BroadcastRecieverPratice.CustomBroadCastReciver"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="CUSTOM_INTENT"></action> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <activity android:name=".IntentPractice.PracticeImplicitIntent">
+        </activity>
     </application>
 
 </manifest>
