@@ -37,9 +37,17 @@
         <activity android:name=".CustomStylePractice.PracticeCustomStyle">
         </activity>
         <activity
-            android:theme="@style/MyAppTheme"
-            android:name=".UiTask1Practice.PracticeUiTask1">
+            android:name=".UiTask1Practice.PracticeUiTask1"
+            android:theme="@style/MyAppTheme">
         </activity>
+        <activity android:name=".ServicesPractice.PracticeServices">
+        </activity>
+
+        <service
+            android:name=".ServicesPractice.MyService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
     </application>
 
 </manifest>
