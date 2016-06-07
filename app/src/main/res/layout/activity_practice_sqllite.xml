@@ -35,29 +35,6 @@
             android:onClick="insertData"
             android:layout_height="wrap_content"/>
     </LinearLayout>
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/llsql1"
-        android:id="@+id/llsql2"
-        android:weightSum="5"
-        android:gravity="right"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <EditText
-            android:id="@+id/etId"
-            android:layout_weight="1"
-            android:hint="Id"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"/>
-        <Button
-            android:text="remove"
-            style="@style/iphone_style.iphone_style_button"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:onClick="removeData"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
 
     <Button
         style="@style/iphone_style.iphone_style_button"
@@ -67,14 +44,19 @@
         android:text="Display Records"
         android:id="@+id/button"
         android:onClick="displayData"
-        android:layout_below="@+id/llsql2"
-    ></Button>
-
-    <TextView
-        android:layout_marginTop="10dp"
-        android:hint="hi"
-        android:layout_below="@id/button"
-        android:id="@+id/tvdisplay"
+        android:layout_below="@id/llsql1"></Button>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/button"
+        android:weightSum="1"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <ListView
+            style="@style/iphone_style"
+            android:id="@+id/lvSqliteValeList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+    </LinearLayout>
 </RelativeLayout>
