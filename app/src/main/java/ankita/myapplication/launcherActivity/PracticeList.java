@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import ankita.myapplication.BroadcastRecieverPratice.PractiveBroadcastReciever;
+import ankita.myapplication.IntentApplicationPractice.PracitceIntentApplication;
 import ankita.myapplication.CustomStylePractice.PracticeCustomStyle;
 import ankita.myapplication.IntentPractice.PracticeImplicitIntent;
 import ankita.myapplication.ServicesPractice.PracticeServices;
@@ -18,6 +19,7 @@ import ankita.myapplication.customList.PracticeCustomListView;
 import ankita.myapplication.expandableListViewPractive.PracticeExpandableList;
 import ankita.myapplication.gridViewPractice.PracticeGridView;
 import ankita.myapplication.layoutPractice.PracticeLinearLauoyt;
+import ankita.myapplication.sqlLiteDatabasePractice.PracticeSqllite;
 import ankita.myapplication.uiControlPractice.PracticeUiControls;
 import ankita.myapplication.layoutPractice.PractiveFrameLayout;
 import ankita.myapplication.layoutPractice.PractiveRelativeLayout;
@@ -27,10 +29,12 @@ public class PracticeList extends AppCompatActivity {
 
     String[] mobileArray = {"Linear Layout","Relative Layout","FrameLayout","UI Controls",
                             "CustomListView","Grid View","Expandable List","Custom Style",
-                            "Ui Task 1","Services ","Broadcast Reciever","Implicit Intent"};
+                            "Ui Task 1","Services ","Broadcast Reciever","Implicit Intent",
+                            "Intent Application (Camera)","Sqllite Practice"};
     Class[] activities = {PracticeLinearLauoyt.class, PractiveRelativeLayout.class, PractiveFrameLayout.class,PracticeUiControls.class,
-                          PracticeCustomListView.class, PracticeGridView.class, PracticeExpandableList.class, PracticeCustomStyle.class,
-                          PracticeUiTask1.class, PracticeServices.class, PractiveBroadcastReciever.class, PracticeImplicitIntent.class};
+                          PracticeCustomListView.class, PracticeGridView.class,PracticeExpandableList.class, PracticeCustomStyle.class,
+                          PracticeUiTask1.class, PracticeServices.class, PractiveBroadcastReciever.class, PracticeImplicitIntent.class,
+                          PracitceIntentApplication.class, PracticeSqllite.class};
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         // Array of strings...
