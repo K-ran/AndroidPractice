@@ -1,6 +1,8 @@
 package ankita.myapplication.sqlLiteDatabasePractice;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,19 +30,32 @@ public class CustomArrayAdapter extends ArrayAdapter<StudentData> {
         convertView = LayoutInflater.from(getContext()).inflate(R.layout.sqlite_vala_list_item,parent,false);
         final StudentData studentData = getItem(position);
         TextView tvId = (TextView)convertView.findViewById(R.id.tvsqlId);
-        TextView tvName = (TextView)convertView.findViewById(R.id.tvsqlName);
-        TextView tvMarks = (TextView)convertView.findViewById(R.id.tvsqlMarks);
+        final TextView tvName = (TextView)convertView.findViewById(R.id.tvsqlName);
+        final TextView tvMarks = (TextView)convertView.findViewById(R.id.tvsqlMarks);
         Button btn = (Button)convertView.findViewById(R.id.btnsqlDeleteMe);
+        Button btnedit = (Button)convertView.findViewById(R.id.btnsqlEditMe);
         tvId.setText(studentData.id+"");
         tvName.setText(studentData.name);
         tvMarks.setText(studentData.marks+"");
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                StudentData studentData1= getItem(position);
+                StudentData studentData1 = getItem(position);
                 myData.remove(position);
                 notifyDataSetChanged();
-                ((PracticeSqllite)getContext()).removeData(studentData.id);
+                ((PracticeSqllite) getContext()).removeData(studentData.id);
+            }
+        });
+
+        btnedit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                http://www.mkyong.com/android/android-prompt-user-input-dialog-example/
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                        getContext());
+                View prompt =  LayoutInflater.from(getContext()).inflate(R.layout.sql_alert_box, null);
+                alertDialogBuilder.setView(LayoutInflater.from(getContext()).inflate(R.layout.sql_alert_box,null));
+
             }
         });
 
