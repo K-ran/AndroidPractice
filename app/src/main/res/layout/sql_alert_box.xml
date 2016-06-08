@@ -19,7 +19,7 @@
     <EditText
         android:hint="Marks"
         android:layout_weight="1.5"
-        android:id="@+id/editTextDialogUserInputId"
+        android:id="@+id/editTextDialogUserInputMark"
         android:layout_width="0dp"
         android:layout_height="wrap_content" >
         <requestFocus />
