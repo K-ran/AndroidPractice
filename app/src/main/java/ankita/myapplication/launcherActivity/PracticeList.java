@@ -17,6 +17,7 @@ import ankita.myapplication.ServicesPractice.PracticeServices;
 import ankita.myapplication.UiTask1Practice.PracticeUiTask1;
 import ankita.myapplication.customList.PracticeCustomListView;
 import ankita.myapplication.expandableListViewPractive.PracticeExpandableList;
+import ankita.myapplication.fragmentPractice.PracticeFragment;
 import ankita.myapplication.gridViewPractice.PracticeGridView;
 import ankita.myapplication.layoutPractice.PracticeLinearLauoyt;
 import ankita.myapplication.sqlLiteDatabasePractice.PracticeSqllite;
@@ -30,11 +31,11 @@ public class PracticeList extends AppCompatActivity {
     String[] mobileArray = {"Linear Layout","Relative Layout","FrameLayout","UI Controls",
                             "CustomListView","Grid View","Expandable List","Custom Style",
                             "Ui Task 1","Services ","Broadcast Reciever","Implicit Intent",
-                            "Intent Application (Camera)","Sqllite Practice"};
+                            "Intent Application (Camera)","Sqllite Practice","Fragments"};
     Class[] activities = {PracticeLinearLauoyt.class, PractiveRelativeLayout.class, PractiveFrameLayout.class,PracticeUiControls.class,
                           PracticeCustomListView.class, PracticeGridView.class,PracticeExpandableList.class, PracticeCustomStyle.class,
                           PracticeUiTask1.class, PracticeServices.class, PractiveBroadcastReciever.class, PracticeImplicitIntent.class,
-                          PracitceIntentApplication.class, PracticeSqllite.class};
+                          PracitceIntentApplication.class, PracticeSqllite.class, PracticeFragment.class};
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         // Array of strings...

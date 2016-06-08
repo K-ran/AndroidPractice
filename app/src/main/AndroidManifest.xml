@@ -4,8 +4,6 @@
 
     <uses-permission android:name="android.permission.CAMERA"/>
 
-    <uses-feature android:name="android.hardware.camera2"/>
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -72,6 +70,13 @@
 
         <activity android:name=".sqlLiteDatabasePractice.PracticeSqllite">
         </activity>
+
+        <!--android:configChanges is needed to stop the app from crashing on orientation change-->
+        <activity android:name=".fragmentPractice.PracticeFragment"
+        android:configChanges="orientation|screenSize">
+        </activity>
+
+    <uses-feature android:name="android.hardware.camera2"/>
     </application>
 
 </manifest>
