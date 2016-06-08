@@ -40,8 +40,6 @@ public class CharacterInformationFragment extends Fragment {
         }
         catch (NullPointerException e){
             Log.e ("Exception :"," Position NUll");
-        }
-        finally {
             position=0;
         }
         TextView tv = (TextView)v.findViewById (R.id.tvFragmentDisctiption);

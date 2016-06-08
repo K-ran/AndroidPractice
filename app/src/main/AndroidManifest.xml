@@ -73,7 +73,7 @@
 
         <!--android:configChanges is needed to stop the app from crashing on orientation change-->
         <activity android:name=".fragmentPractice.PracticeFragment"
-        android:configChanges="orientation|screenSize">
+        >
         </activity>
 
     <uses-feature android:name="android.hardware.camera2"/>

@@ -1,5 +1,7 @@
 package ankita.myapplication.fragmentPractice;
 
+import android.app.Activity;
+import android.content.res.Configuration;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -30,8 +32,9 @@ public class PracticeFragment extends AppCompatActivity implements CharacterList
         bundle.putInt ("position", position);
         CharacterInformationFragment characterInformationFragment = new CharacterInformationFragment ();
         characterInformationFragment.setArguments (bundle);
-        Fragment fragment = (Fragment)getSupportFragmentManager ().findFragmentById (R.id.fragmentDisplay2);
-        if(fragment==null) {
+//        Fragment fragment = (Fragment)getSupportFragmentManager ().findFragmentById (R.id.fragmentDisplay2);
+        int orientation = getResources ().getConfiguration ().orientation;
+        if(orientation==1) {
             Log.d ("Hi fragment B not d"," hi ");
             fragmentTransaction = fragmentManager.beginTransaction ();
             fragmentTransaction.replace (R.id.fragmentDisplay, characterInformationFragment);
@@ -47,4 +50,10 @@ public class PracticeFragment extends AppCompatActivity implements CharacterList
             fragmentTransaction.commit ();
         }
     }
+
+//    @Override
+//    public void onConfigurationChanged (Configuration newConfig) {
+//        setContentView (R.layout.activity_practice_fragment);
+//        super.onConfigurationChanged (newConfig);
+//    }
 }
