@@ -20,7 +20,7 @@ public class PracitceIntentApplication extends AppCompatActivity {
     protected void onCreate (Bundle savedInstanceState) {
 
         super.onCreate (savedInstanceState);
-        setContentView (R.layout.activity_pracitce_intent_applcation);
+        setContentView (R.layout.activity_practice_intent_applcation);
     }
 
     public  void  getTheStuff(View view){

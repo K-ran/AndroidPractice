@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ankita.myapplication.sharedPreferencePrectice.PrecticeSharedPreference">
+    <EditText
+        android:hint="Write you name"
+        android:id="@+id/etSharedPreferencesName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:onClick="saveName"
+        android:id="@+id/btnSharedPreferencesSave"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/etSharedPreferencesName"
+        android:text="Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvSharedPreferenceOne"
+        android:textSize="25dp"
+        android:layout_below="@id/btnSharedPreferencesSave"
+        android:text="Last saved name :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_alignParentRight="true"
+        android:id="@+id/tvSharedPreferenceTwo"
+        android:textSize="25dp"
+        android:layout_below="@id/btnSharedPreferencesSave"
+        android:text="name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remove"
+        android:id="@+id/button2"
+        android:onClick="removeName"
+        android:layout_below="@+id/tvSharedPreferenceTwo"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

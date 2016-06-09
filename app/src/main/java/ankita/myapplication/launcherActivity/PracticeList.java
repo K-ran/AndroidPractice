@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import ankita.myapplication.AsyncTask.PracticeAsyncTask;
 import ankita.myapplication.BroadcastRecieverPratice.PractiveBroadcastReciever;
 import ankita.myapplication.IntentApplicationPractice.PracitceIntentApplication;
 import ankita.myapplication.CustomStylePractice.PracticeCustomStyle;
@@ -20,6 +21,7 @@ import ankita.myapplication.expandableListViewPractive.PracticeExpandableList;
 import ankita.myapplication.fragmentPractice.PracticeFragment;
 import ankita.myapplication.gridViewPractice.PracticeGridView;
 import ankita.myapplication.layoutPractice.PracticeLinearLauoyt;
+import ankita.myapplication.sharedPreferencePrectice.PrecticeSharedPreference;
 import ankita.myapplication.sqlLiteDatabasePractice.PracticeSqllite;
 import ankita.myapplication.uiControlPractice.PracticeUiControls;
 import ankita.myapplication.layoutPractice.PractiveFrameLayout;
@@ -31,11 +33,13 @@ public class PracticeList extends AppCompatActivity {
     String[] mobileArray = {"Linear Layout","Relative Layout","FrameLayout","UI Controls",
                             "CustomListView","Grid View","Expandable List","Custom Style",
                             "Ui Task 1","Services ","Broadcast Reciever","Implicit Intent",
-                            "Intent Application (Camera)","Sqllite Practice","Fragments"};
+                            "Intent Application (Camera)","Sqllite Practice","Fragments","Shared Preferences",
+                            "Async Task"};
     Class[] activities = {PracticeLinearLauoyt.class, PractiveRelativeLayout.class, PractiveFrameLayout.class,PracticeUiControls.class,
                           PracticeCustomListView.class, PracticeGridView.class,PracticeExpandableList.class, PracticeCustomStyle.class,
                           PracticeUiTask1.class, PracticeServices.class, PractiveBroadcastReciever.class, PracticeImplicitIntent.class,
-                          PracitceIntentApplication.class, PracticeSqllite.class, PracticeFragment.class};
+                          PracitceIntentApplication.class, PracticeSqllite.class, PracticeFragment.class, PrecticeSharedPreference.class,
+                          PracticeAsyncTask.class};
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         // Array of strings...
