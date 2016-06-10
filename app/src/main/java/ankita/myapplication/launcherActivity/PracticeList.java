@@ -16,7 +16,7 @@ import ankita.myapplication.CustomStylePractice.PracticeCustomStyle;
 import ankita.myapplication.IntentPractice.PracticeImplicitIntent;
 import ankita.myapplication.ServicesPractice.PracticeServices;
 import ankita.myapplication.UiTask1Practice.PracticeUiTask1;
-import ankita.myapplication.UiTask2.PracticeUiTask2;
+import ankita.myapplication.UiTask2Practice.PracticeUiTask2;
 import ankita.myapplication.customList.PracticeCustomListView;
 import ankita.myapplication.drawablesPractice.PracticeDrawables;
 import ankita.myapplication.expandableListViewPractive.PracticeExpandableList;

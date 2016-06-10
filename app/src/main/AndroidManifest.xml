@@ -84,7 +84,7 @@
         </activity>
         <activity android:name=".drawablesPractice.PracticeDrawables">
         </activity>
-        <activity android:name=".UiTask2.PracticeUiTask2">
+        <activity android:name=".UiTask2Practice.PracticeUiTask2">
         </activity>
     </application>
 
