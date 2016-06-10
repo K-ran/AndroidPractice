@@ -17,11 +17,11 @@
         android:id="@+id/tvFragmentTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-    <fragment
+    <FrameLayout
         class="ankita.myapplication.fragmentPractice.CharacterListFragment"
         android:id="@+id/fragmentDisplay"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/tvFragmentTitle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></fragment>
+        android:layout_height="match_parent"></FrameLayout>
 </RelativeLayout>

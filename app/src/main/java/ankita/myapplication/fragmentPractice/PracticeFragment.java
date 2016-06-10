@@ -26,6 +26,9 @@ public class PracticeFragment extends AppCompatActivity implements CharacterList
         setContentView (R.layout.activity_practice_fragment);
         myListFragment = new CharacterListFragment ();
         fragmentManager = getSupportFragmentManager ();
+        fragmentTransaction = fragmentManager.beginTransaction ();
+        fragmentTransaction.add (R.id.fragmentDisplay,myListFragment);
+        fragmentTransaction.commit ();
     }
 
     @Override
@@ -42,9 +45,19 @@ public class PracticeFragment extends AppCompatActivity implements CharacterList
             fragmentTransaction.commit ();
     }
 
+
+    @Override
+    protected void onDestroy () {
+        super.onDestroy ();
+    }
+
     @Override
     public void onSaveInstanceState (Bundle outState, PersistableBundle outPersistentState) {
         Log.d("cool","A");
+        Log.d("cool"," Practice avtivity destryed");
+        fragmentTransaction = fragmentManager.beginTransaction ();
+        fragmentTransaction.remove (myListFragment);
+        fragmentTransaction.commit ();
         super.onSaveInstanceState (outState, outPersistentState);
     }
 }
