@@ -56,17 +56,17 @@ public class CharacterListFragment extends Fragment {
         lv.setOnItemClickListener (new AdapterView.OnItemClickListener () {
             @Override
             public void onItemClick (AdapterView<?> parent, View view, int position, long id) {
-
-                Log.d ("Item Clicked ", position + "");
-                Bundle bundle = new Bundle ();
-                bundle.putInt ("position", position);
-                CharacterInformationFragment characterInformationFragment = new CharacterInformationFragment ();
-                characterInformationFragment.setArguments (bundle);
-                fragmentTransaction = fragmentManager.beginTransaction ();
-                fragmentTransaction.replace (R.id.fragmentDisplay, characterInformationFragment);
-                fragmentTransaction.addToBackStack (null);
-                fragmentTransaction.setTransition (fragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
-                fragmentTransaction.commit ();
+                  mListener.onFragmentInteraction(position);
+//                Log.d ("Item Clicked ", position + "");
+//                Bundle bundle = new Bundle ();
+//                bundle.putInt ("position", position);
+//                CharacterInformationFragment characterInformationFragment = new CharacterInformationFragment ();
+//                characterInformationFragment.setArguments (bundle);
+//                fragmentTransaction = fragmentManager.beginTransaction ();
+//                fragmentTransaction.replace (R.id.fragmentDisplay, characterInformationFragment);
+//                fragmentTransaction.addToBackStack (null);
+//                fragmentTransaction.setTransition (fragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
+//                fragmentTransaction.commit ();
             }
         });
         return view;

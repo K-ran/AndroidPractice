@@ -50,7 +50,6 @@ public class CharacterInformationFragment extends Fragment {
     @Override
     public void onDestroy () {
         Log.d ("cool"," I am going to crash");
-
         super.onDestroy ();
     }
 

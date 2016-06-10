@@ -17,6 +17,7 @@ public class PracticeFragment extends AppCompatActivity implements CharacterList
     FragmentManager fragmentManager ;
     FragmentTransaction fragmentTransaction ;
     CharacterListFragment myListFragment;
+    CharacterInformationFragment characterInformationFragment;
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         if(savedInstanceState!=null)
@@ -29,16 +30,16 @@ public class PracticeFragment extends AppCompatActivity implements CharacterList
 
     @Override
     public void onFragmentInteraction (int position) {
-//        Log.d ("Item Clicked ", position + "");
-//        Bundle bundle = new Bundle ();
-//        bundle.putInt ("position", position);
-//        CharacterInformationFragment characterInformationFragment = new CharacterInformationFragment ();
-//        characterInformationFragment.setArguments (bundle);
-//            fragmentTransaction = fragmentManager.beginTransaction ();
-//            fragmentTransaction.replace (R.id.fragmentDisplay, characterInformationFragment);
-//            fragmentTransaction.addToBackStack (null);
-//            fragmentTransaction.setTransition (fragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
-//            fragmentTransaction.commit ();
+        Log.d("Item Clicked ", position + "");
+        Bundle bundle = new Bundle ();
+        bundle.putInt ("position", position);
+        characterInformationFragment = new CharacterInformationFragment ();
+        characterInformationFragment.setArguments(bundle);
+            fragmentTransaction = fragmentManager.beginTransaction ();
+            fragmentTransaction.replace (R.id.fragmentDisplay, characterInformationFragment);
+            fragmentTransaction.addToBackStack (null);
+            fragmentTransaction.setTransition (fragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
+            fragmentTransaction.commit ();
     }
 
     @Override
