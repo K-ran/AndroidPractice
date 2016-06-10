@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="horizontal"
               android:layout_weight="10"
+              android:padding="5dp"
+              android:background="@color/customWhite"
               android:layout_width="match_parent"
               android:layout_height="wrap_content">
     <LinearLayout
@@ -10,14 +12,17 @@
         android:layout_width="0dp"
         android:weightSum="2"
          android:orientation="vertical"
-         android:gravity="center_horizontal"
+         android:gravity="center"
         android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
         <ImageView
             android:padding="5dp"
             android:background="@drawable/dottering"
             android:src="@drawable/profileimage"
-            android:layout_width="40dp"
-            android:layout_height="40dp"/>
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
         <ImageView
             android:src="@drawable/vertical_line"
             android:layout_width="match_parent"
@@ -26,7 +31,7 @@
             style="@style/Uitask2textBox"
             android:padding="2dp"
             android:gravity="center_horizontal"
-            android:text="14.7"
+            android:text="14.7 Miles"
             android:id="@+id/tvUiTask2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -38,14 +43,164 @@
             android:padding="0dp"
             android:background="@drawable/dottering"
             android:src="@drawable/finish"
-            android:layout_width="40dp"
-            android:layout_height="40dp"/>
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_weight="7.5"
         android:layout_width="0dp"
+        android:weightSum="2"
+        android:orientation="vertical"
         android:layout_height="match_parent">
+        <LinearLayout
+            android:weightSum="10"
+            android:orientation="horizontal"
+            android:layout_weight=".95"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <LinearLayout
+                android:layout_weight="7.5"
+                android:layout_width="0dp"
+                android:weightSum="2"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <!-- Address here-->
+                <TextView
+                    style="@style/locationStyle"
+                    android:padding="0dp"
+                    android:gravity="bottom"
+                    android:text="From this Location"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" />
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" >
+                    <TextView
+                        style="@style/CityCountryStyle"
+                        android:padding="2dp"
+                        android:text="City Country"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        style="@style/dataTimeStyle"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        style="@style/dataTimeStyle"
+                        android:padding="2dp"
+                        android:text="time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="2.5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <!-- Image here-->
+                <TextView
+                    android:layout_weight=".5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" />
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_gravity="top"
+                    android:src="@drawable/chekkered"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="7"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+                    <TextView
+                        android:gravity="center"
+                        android:text="25.00"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:src="@drawable/chekkered"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" />
+                <TextView
+                    android:layout_weight=".5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/horizontal_line"
+            android:layout_weight=".1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+        </LinearLayout>
+        <LinearLayout
+            android:weightSum="10"
+            android:orientation="horizontal"
+            android:layout_weight=".95"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <LinearLayout
+                android:layout_weight="7.5"
+                android:weightSum="2"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <!-- Address here-->
+                <TextView
+                    style="@style/locationStyle"
+                    android:gravity="bottom"
+                    android:padding="2dp"
+                    android:text="From to Location"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" />
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" >
+                    <TextView
+                        style="@style/CityCountryStyle"
+                        android:padding="2dp"
+                        android:text="City Country"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        style="@style/dataTimeStyle"
+                        android:padding="2dp"
+                        android:text="Date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        style="@style/dataTimeStyle"
+                        android:padding="2dp"
+                        android:text="time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="2.5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <!-- Image here-->
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
