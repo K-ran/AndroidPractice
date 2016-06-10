@@ -5,7 +5,7 @@
               android:padding="5dp"
               android:background="@color/customWhite"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+              android:layout_height="200dp">
     <LinearLayout
         android:padding="5dp"
          android:layout_weight="2.5"
@@ -28,11 +28,11 @@
             android:layout_width="match_parent"
             android:layout_height="25dp"/>
         <TextView
+            android:id="@+id/tvDistance"
             style="@style/Uitask2textBox"
             android:padding="2dp"
             android:gravity="center_horizontal"
             android:text="14.7 Miles"
-            android:id="@+id/tvUiTask2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <ImageView
@@ -63,13 +63,14 @@
             android:layout_width="match_parent"
             android:layout_height="0dp">
             <LinearLayout
-                android:layout_weight="7.5"
+                android:layout_weight="7.4"
                 android:layout_width="0dp"
                 android:weightSum="2"
                 android:orientation="vertical"
                 android:layout_height="match_parent">
                 <!-- Address here-->
                 <TextView
+                    android:id="@+id/tvUpperFromLocation"
                     style="@style/locationStyle"
                     android:padding="0dp"
                     android:gravity="bottom"
@@ -83,18 +84,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp" >
                     <TextView
+                        android:id="@+id/tvUpperFromCountry"
                         style="@style/CityCountryStyle"
                         android:padding="2dp"
                         android:text="City Country"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent" />
                     <TextView
+                        android:id="@+id/tvUpperFromDate"
                         style="@style/dataTimeStyle"
                         android:padding="2dp"
                         android:text="Date"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent" />
                     <TextView
+                        android:id="@+id/tvUpperFromTime"
                         style="@style/dataTimeStyle"
                         android:padding="2dp"
                         android:text="time"
@@ -102,6 +106,10 @@
                         android:layout_height="match_parent" />
                 </LinearLayout>
             </LinearLayout>
+            <View
+                android:background="@color/myblue"
+                android:layout_width="1dp"
+                android:layout_height="match_parent" />
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_weight="2.5"
@@ -124,8 +132,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp">
                     <TextView
+                        android:id="@+id/tvUpperFromCost"
                         android:gravity="center"
-                        android:text="25.00"
+                        android:text="$ 25.00"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />
                 </LinearLayout>
@@ -155,13 +164,14 @@
             android:layout_width="match_parent"
             android:layout_height="0dp">
             <LinearLayout
-                android:layout_weight="7.5"
+                android:layout_weight="7.4"
                 android:weightSum="2"
                 android:layout_width="0dp"
                 android:orientation="vertical"
                 android:layout_height="match_parent">
                 <!-- Address here-->
                 <TextView
+                    android:id="@+id/tvLowerFromLocation"
                     style="@style/locationStyle"
                     android:gravity="bottom"
                     android:padding="2dp"
@@ -175,18 +185,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp" >
                     <TextView
+                        android:id="@+id/tvLowerFromCountry"
                         style="@style/CityCountryStyle"
                         android:padding="2dp"
                         android:text="City Country"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent" />
                     <TextView
+                        android:id="@+id/tvLowerFromDate"
                         style="@style/dataTimeStyle"
                         android:padding="2dp"
                         android:text="Date"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent" />
                     <TextView
+                        android:id="@+id/tvLowerFromTime"
                         style="@style/dataTimeStyle"
                         android:padding="2dp"
                         android:text="time"
@@ -194,11 +207,19 @@
                         android:layout_height="match_parent" />
                 </LinearLayout>
             </LinearLayout>
+            <View
+                android:background="@color/myblue"
+                android:layout_width="1dp"
+                android:layout_height="match_parent" />
             <LinearLayout
                 android:layout_weight="2.5"
                 android:layout_width="0dp"
                 android:layout_height="match_parent">
                 <!-- Image here-->
+                <ImageView
+                    android:src="@drawable/dummyimages"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
