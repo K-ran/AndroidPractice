@@ -58,6 +58,7 @@ public class PracticeConnectivityManager extends AppCompatActivity implements Ne
     }
 
     void setVisibility(boolean mobileData){
+
         if(MOBILE_DATA_Setting==true && mobileData)
             iv.setVisibility (View.VISIBLE);
         else
@@ -67,7 +68,7 @@ public class PracticeConnectivityManager extends AppCompatActivity implements Ne
     @Override
     public void NetworkRecieverCallback (boolean wifi) {
         setVisibility (wifi);
-        Log.d (DEBUG_TAG,"Mobile data changed");
+        Log.d (DEBUG_TAG,"Mobile data changed "+ wifi);
     }
 
     @Override

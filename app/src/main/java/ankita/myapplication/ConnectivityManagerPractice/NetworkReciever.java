@@ -20,7 +20,7 @@ public class NetworkReciever extends BroadcastReceiver {
         ConnectivityManager conn =  (ConnectivityManager)
                 context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = conn.getActiveNetworkInfo();
-        nrl.NetworkRecieverCallback (networkInfo != null && networkInfo.getType() == ConnectivityManager.TYPE_WIFI);
+        nrl.NetworkRecieverCallback (networkInfo != null && networkInfo.getType() == ConnectivityManager.TYPE_MOBILE);
     }
 
     public interface NetworkRecieverListner{
