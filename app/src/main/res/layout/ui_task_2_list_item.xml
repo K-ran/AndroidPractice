@@ -25,6 +25,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"/>
         <ImageView
+            android:layerType="software"
             android:src="@drawable/vertical_line"
             android:layout_width="match_parent"
             android:layout_height="25dp"/>
@@ -37,6 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <ImageView
+            android:layerType="software"
             android:src="@drawable/vertical_line"
             android:layout_width="match_parent"
             android:layout_height="25dp"/>
@@ -153,6 +155,7 @@
 
         </LinearLayout>
         <LinearLayout
+            android:layerType="software"
             android:background="@drawable/horizontal_line"
             android:layout_weight=".1"
             android:layout_width="match_parent"

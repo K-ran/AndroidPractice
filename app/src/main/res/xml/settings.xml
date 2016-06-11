@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="useMobile"
+        android:title="Use Mobile Network only"
+        android:summary="Only uses mobile new to do something"
+        android:defaultValue="true" />
+    <ListPreference
+        android:dependency="useMobile"
+        android:key="pref_syncConnectionType"
+        android:title="Other settings"
+        android:dialogTitle="dialog Title"
+         />
+    <EditTextPreference android:key="etkey"
+                        android:title="Title"
+                        android:summary="This is summary">
+
+    </EditTextPreference>
+
+</PreferenceScreen>
