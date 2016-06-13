@@ -26,6 +26,7 @@ import ankita.myapplication.gridViewPractice.PracticeGridView;
 import ankita.myapplication.layoutPractice.PracticeLinearLauoyt;
 import ankita.myapplication.sharedPreferencePrectice.PrecticeSharedPreference;
 import ankita.myapplication.sqlLiteDatabasePractice.PracticeSqllite;
+import ankita.myapplication.tabsPractice.PracticeTabs;
 import ankita.myapplication.uiControlPractice.PracticeUiControls;
 import ankita.myapplication.layoutPractice.PractiveFrameLayout;
 import ankita.myapplication.layoutPractice.PractiveRelativeLayout;
@@ -38,13 +39,13 @@ public class PracticeList extends AppCompatActivity {
                             "Ui Task 1","Services ","Broadcast Reciever","Implicit Intent",
                             "Intent Application (Camera)","Sqllite Practice","Fragments","Shared Preferences",
                             "Async Task","Drawables Practice","Ui task 2","Connectvity Manager",
-                            };
+                            "Tabs Practice"};
     Class[] activities = {PracticeLinearLauoyt.class, PractiveRelativeLayout.class, PractiveFrameLayout.class,PracticeUiControls.class,
                           PracticeCustomListView.class, PracticeGridView.class,PracticeExpandableList.class, PracticeCustomStyle.class,
                           PracticeUiTask1.class, PracticeServices.class, PractiveBroadcastReciever.class, PracticeImplicitIntent.class,
                           PracitceIntentApplication.class, PracticeSqllite.class, PracticeFragment.class, PrecticeSharedPreference.class,
                           PracticeAsyncTask.class, PracticeDrawables.class, PracticeUiTask2.class, PracticeConnectivityManager.class,
-                          };
+                          PracticeTabs.class};
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         // Array of strings...
@@ -61,6 +62,5 @@ public class PracticeList extends AppCompatActivity {
                 startActivity (intent);
             }
         });
-
     }
 }

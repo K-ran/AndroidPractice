@@ -15,6 +15,7 @@
         <activity android:name=".launcherActivity.PracticeList">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
@@ -89,6 +90,8 @@
         <activity android:name=".ConnectivityManagerPractice.PracticeConnectivityManager">
         </activity>
         <activity android:name=".ConnectivityManagerPractice.MySettings">
+        </activity>
+        <activity android:name=".tabsPractice.PracticeTabs">
         </activity>
     </application>
 
