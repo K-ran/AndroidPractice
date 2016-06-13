@@ -93,6 +93,8 @@
         </activity>
         <activity android:name=".tabsPractice.PracticeTabs">
         </activity>
+        <activity android:name=".TabsUsingCustomPager.PracticeTabsUsingCustomPager">
+        </activity>
     </application>
 
 </manifest>
