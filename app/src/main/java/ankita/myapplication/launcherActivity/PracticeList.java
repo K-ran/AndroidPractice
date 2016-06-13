@@ -25,6 +25,7 @@ import ankita.myapplication.expandableListViewPractive.PracticeExpandableList;
 import ankita.myapplication.fragmentPractice.PracticeFragment;
 import ankita.myapplication.gridViewPractice.PracticeGridView;
 import ankita.myapplication.layoutPractice.PracticeLinearLauoyt;
+import ankita.myapplication.navigationDrawerPractice.PracticeNavigationDrawer;
 import ankita.myapplication.sharedPreferencePrectice.PrecticeSharedPreference;
 import ankita.myapplication.sqlLiteDatabasePractice.PracticeSqllite;
 import ankita.myapplication.tabsPractice.PracticeTabs;
@@ -40,13 +41,13 @@ public class PracticeList extends AppCompatActivity {
                             "Ui Task 1","Services ","Broadcast Reciever","Implicit Intent",
                             "Intent Application (Camera)","Sqllite Practice","Fragments","Shared Preferences",
                             "Async Task","Drawables Practice","Ui task 2","Connectvity Manager",
-                            "Tabs Practice","Tabs Custom"};
+                            "Tabs Practice","Tabs Custom","Navigation Drawer"};
     Class[] activities = {PracticeLinearLauoyt.class, PractiveRelativeLayout.class, PractiveFrameLayout.class,PracticeUiControls.class,
                           PracticeCustomListView.class, PracticeGridView.class,PracticeExpandableList.class, PracticeCustomStyle.class,
                           PracticeUiTask1.class, PracticeServices.class, PractiveBroadcastReciever.class, PracticeImplicitIntent.class,
                           PracitceIntentApplication.class, PracticeSqllite.class, PracticeFragment.class, PrecticeSharedPreference.class,
                           PracticeAsyncTask.class, PracticeDrawables.class, PracticeUiTask2.class, PracticeConnectivityManager.class,
-                          PracticeTabs.class, PracticeTabsUsingCustomPager.class};
+                          PracticeTabs.class, PracticeTabsUsingCustomPager.class, PracticeNavigationDrawer.class};
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         // Array of strings...

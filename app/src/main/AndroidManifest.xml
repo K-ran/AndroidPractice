@@ -95,6 +95,8 @@
         </activity>
         <activity android:name=".TabsUsingCustomPager.PracticeTabsUsingCustomPager">
         </activity>
+        <activity android:name=".navigationDrawerPractice.PracticeNavigationDrawer">
+        </activity>
     </application>
 
 </manifest>
