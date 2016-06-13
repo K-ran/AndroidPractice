@@ -97,6 +97,8 @@
         </activity>
         <activity android:name=".navigationDrawerPractice.PracticeNavigationDrawer">
         </activity>
+        <activity android:name=".FlowingDrawer.PracticeFlowingDrawer">
+        </activity>
     </application>
 
 </manifest>

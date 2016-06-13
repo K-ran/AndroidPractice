@@ -12,6 +12,7 @@ import android.widget.ListView;
 import ankita.myapplication.AsyncTask.PracticeAsyncTask;
 import ankita.myapplication.BroadcastRecieverPratice.PractiveBroadcastReciever;
 import ankita.myapplication.ConnectivityManagerPractice.PracticeConnectivityManager;
+import ankita.myapplication.FlowingDrawer.PracticeFlowingDrawer;
 import ankita.myapplication.IntentApplicationPractice.PracitceIntentApplication;
 import ankita.myapplication.CustomStylePractice.PracticeCustomStyle;
 import ankita.myapplication.IntentPractice.PracticeImplicitIntent;
@@ -41,13 +42,15 @@ public class PracticeList extends AppCompatActivity {
                             "Ui Task 1","Services ","Broadcast Reciever","Implicit Intent",
                             "Intent Application (Camera)","Sqllite Practice","Fragments","Shared Preferences",
                             "Async Task","Drawables Practice","Ui task 2","Connectvity Manager",
-                            "Tabs Practice","Tabs Custom","Navigation Drawer"};
+                            "Tabs Practice","Tabs Custom","Navigation Drawer","Flowing Drawer",
+                            };
     Class[] activities = {PracticeLinearLauoyt.class, PractiveRelativeLayout.class, PractiveFrameLayout.class,PracticeUiControls.class,
                           PracticeCustomListView.class, PracticeGridView.class,PracticeExpandableList.class, PracticeCustomStyle.class,
                           PracticeUiTask1.class, PracticeServices.class, PractiveBroadcastReciever.class, PracticeImplicitIntent.class,
                           PracitceIntentApplication.class, PracticeSqllite.class, PracticeFragment.class, PrecticeSharedPreference.class,
                           PracticeAsyncTask.class, PracticeDrawables.class, PracticeUiTask2.class, PracticeConnectivityManager.class,
-                          PracticeTabs.class, PracticeTabsUsingCustomPager.class, PracticeNavigationDrawer.class};
+                          PracticeTabs.class, PracticeTabsUsingCustomPager.class, PracticeNavigationDrawer.class, PracticeFlowingDrawer.class,
+                          };
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         // Array of strings...
