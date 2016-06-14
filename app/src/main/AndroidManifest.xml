@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -98,6 +99,12 @@
         <activity android:name=".navigationDrawerPractice.PracticeNavigationDrawer">
         </activity>
         <activity android:name=".FlowingDrawer.PracticeFlowingDrawer">
+        </activity>
+        <activity
+            android:name=".ToolBarPractice.PracticeToolbar"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity android:name=".locationHandeling.PracticeLocationHandeling">
         </activity>
     </application>
 

@@ -36,4 +36,5 @@ dependencies {
     compile 'com.mxn.soul:flowingdrawer-core:1.2.2'
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.android.support:design:23.2.1'
+    compile 'com.google.android.gms:play-services:9.0.2'
 }
