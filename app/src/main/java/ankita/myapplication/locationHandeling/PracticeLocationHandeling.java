@@ -55,11 +55,6 @@ public class PracticeLocationHandeling extends AppCompatActivity implements Loca
                     .build ();
         }
 
-        if (ActivityCompat.checkSelfPermission (this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission (this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            Toast.makeText (PracticeLocationHandeling.this, "Permission not given", Toast.LENGTH_SHORT).show ();
-        }
-
-
 
         LocationSettingsRequest.Builder builder = new LocationSettingsRequest.Builder()
                 .addLocationRequest(mLocationRequest);
@@ -106,6 +101,7 @@ public class PracticeLocationHandeling extends AppCompatActivity implements Loca
             Log.d ("Location", String.valueOf (mLastLocation.getLatitude ()));
             Log.d ("Location", String.valueOf (mLastLocation.getLongitude ()));
         }
+        else startLocationUpdates ();
     }
     @Override
     public void onLocationChanged (Location location) {
@@ -121,9 +117,9 @@ public class PracticeLocationHandeling extends AppCompatActivity implements Loca
 
     protected void createLocationRequest() {
         mLocationRequest = new LocationRequest();
-        mLocationRequest.setInterval (1000);
-        mLocationRequest.setFastestInterval (500);
-        mLocationRequest.setPriority (LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
+        mLocationRequest.setInterval (5000);
+        mLocationRequest.setFastestInterval (1000);
+        mLocationRequest.setPriority (LocationRequest.PRIORITY_HIGH_ACCURACY);
     }
 
     protected void startLocationUpdates() {
@@ -132,13 +128,14 @@ public class PracticeLocationHandeling extends AppCompatActivity implements Loca
 
     @Override
     public void onConnectionSuspended (int i) {
-
     }
 
     @Override
     protected void onResume () {
         if(mGoogleApiClient.isConnected() )
             startLocationUpdates();
+        else
+            mGoogleApiClient.connect ();
         super.onResume ();
     }
 
@@ -162,9 +159,13 @@ public class PracticeLocationHandeling extends AppCompatActivity implements Loca
 
     @Override
     protected void onPause () {
-        stopLocationUpdates ();
+        if (mGoogleApiClient.isConnected()) {
+            stopLocationUpdates ();
+            mGoogleApiClient.disconnect();
+        }
         super.onPause ();
     }
+
 
     protected void stopLocationUpdates() {
         LocationServices.FusedLocationApi.removeLocationUpdates (
@@ -177,7 +178,8 @@ public class PracticeLocationHandeling extends AppCompatActivity implements Loca
             case 1000:
                 switch (resultCode) {
                     case Activity.RESULT_OK:
-                        startLocationUpdates();
+                        if(mGoogleApiClient.isConnected ())
+                            startLocationUpdates();
                         break;
                     case Activity.RESULT_CANCELED:
                         finish ();
