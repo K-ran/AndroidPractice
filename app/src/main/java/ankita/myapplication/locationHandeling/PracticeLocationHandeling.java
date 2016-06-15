@@ -27,6 +27,13 @@ import com.google.android.gms.location.LocationSettingsRequest;
 import com.google.android.gms.location.LocationSettingsResult;
 import com.google.android.gms.location.LocationSettingsStates;
 import com.google.android.gms.location.LocationSettingsStatusCodes;
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import ankita.myapplication.R;
 public class PracticeLocationHandeling extends AppCompatActivity implements LocationListener,GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
@@ -35,6 +42,11 @@ public class PracticeLocationHandeling extends AppCompatActivity implements Loca
     GoogleApiClient mGoogleApiClient;
     TextView mLatitudeText,mLongitudeText;
     LocationRequest mLocationRequest;
+    Location lastLocation;
+    Marker TP;
+    static final LatLng point = new LatLng (28.6139 , 77.2090);
+    private GoogleMap googleMap;
+
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
@@ -85,6 +97,10 @@ public class PracticeLocationHandeling extends AppCompatActivity implements Loca
                 }
             }
         });
+
+
+
+
     }
 
     @Override
@@ -111,14 +127,39 @@ public class PracticeLocationHandeling extends AppCompatActivity implements Loca
     }
 
     public void setLocationView(Location mLastLocation){
-        mLatitudeText.setText(String.valueOf(mLastLocation.getLatitude()));
-        mLongitudeText.setText(String.valueOf(mLastLocation.getLongitude()));
+        mLatitudeText.setText (String.valueOf (mLastLocation.getLatitude ()));
+        mLongitudeText.setText (String.valueOf (mLastLocation.getLongitude ()));
+        if(lastLocation!=null)
+            if(lastLocation.getLatitude ()==mLastLocation.getLatitude () && lastLocation.getLongitude ()==mLastLocation.getLongitude ())
+                return;
+        try {
+            if (googleMap == null) {
+                googleMap = ((MapFragment) getFragmentManager().
+                        findFragmentById(R.id.map)).getMap();
+            }
+            googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+            if(TP!=null)
+                TP.remove ();
+            TP = googleMap.addMarker (new MarkerOptions ().
+                    position (new LatLng (mLastLocation.getLatitude(),mLastLocation.getLongitude())).title("I am here"));
+
+            CameraUpdate center=
+                    CameraUpdateFactory.newLatLng(TP.getPosition ());
+            CameraUpdate zoom= CameraUpdateFactory.zoomTo (9);
+
+            googleMap.moveCamera (center);
+            googleMap.animateCamera (zoom);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     protected void createLocationRequest() {
         mLocationRequest = new LocationRequest();
-        mLocationRequest.setInterval (5000);
-        mLocationRequest.setFastestInterval (1000);
+        mLocationRequest.setInterval (10000);
+        mLocationRequest.setFastestInterval (5000);
         mLocationRequest.setPriority (LocationRequest.PRIORITY_HIGH_ACCURACY);
     }
 
