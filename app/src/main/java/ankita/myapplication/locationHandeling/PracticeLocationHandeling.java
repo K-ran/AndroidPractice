@@ -1,17 +1,24 @@
 package ankita.myapplication.locationHandeling;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.os.ResultReceiver;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Window;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +38,8 @@ import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -43,11 +52,13 @@ public class PracticeLocationHandeling extends AppCompatActivity implements Loca
     TextView mLatitudeText,mLongitudeText;
     LocationRequest mLocationRequest;
     Location lastLocation;
-    Marker TP;
+    Marker marker1,marker2;
     static final LatLng point = new LatLng (28.6139 , 77.2090);
     private GoogleMap googleMap;
-
-
+    float currentZoom =9;
+    boolean initialZoom = true;
+    private AddressResultReceiver mResultReceiver;
+    private ProgressDialog mProgressDialog;
     @Override
     protected void onCreate (Bundle savedInstanceState) {
 
@@ -82,7 +93,7 @@ public class PracticeLocationHandeling extends AppCompatActivity implements Loca
                 switch (status.getStatusCode ()) {
                     case LocationSettingsStatusCodes.SUCCESS:
                         startLocationUpdates ();
-                        Log.d("Success","success");
+                        Log.d ("Success", "success");
                         break;
                     case LocationSettingsStatusCodes.RESOLUTION_REQUIRED:
                         try {
@@ -98,10 +109,44 @@ public class PracticeLocationHandeling extends AppCompatActivity implements Loca
             }
         });
 
+        if (googleMap == null) {
+            googleMap = ((MapFragment) getFragmentManager().
+                    findFragmentById(R.id.map)).getMap();
+        }
+        googleMap.setMapType (GoogleMap.MAP_TYPE_NORMAL);
 
+        googleMap.setOnCameraChangeListener (new GoogleMap.OnCameraChangeListener () {
+            @Override
+            public void onCameraChange (CameraPosition cameraPosition) {
 
-
+                if (cameraPosition.zoom != currentZoom || !initialZoom) {
+                    currentZoom = cameraPosition.zoom;
+                    initialZoom = false;
+                }
+            }
+        });
+        mProgressDialog = new ProgressDialog(PracticeLocationHandeling.this);
+        mProgressDialog.setIndeterminate (false);
+        mProgressDialog.setProgressStyle (ProgressDialog.STYLE_SPINNER);
+        mProgressDialog.setMessage ("Loading Address");
+        LatLng delhiCoordinates=new LatLng (28.6139,77.2090);
+        marker2 = googleMap.addMarker (new MarkerOptions ().
+                position (delhiCoordinates).title("Delhi"));
+        marker2.setIcon (BitmapDescriptorFactory.fromResource (R.drawable.ic_account_balance_black_48dp));
+        googleMap.setOnMarkerClickListener (new GoogleMap.OnMarkerClickListener () {
+            @Override
+            public boolean onMarkerClick (Marker marker) {
+                Intent intent = new Intent(PracticeLocationHandeling.this, FetchAddressIntentService.class);
+                intent.putExtra (Constants.LOCATION_DATA_EXTRA, marker.getPosition ());
+                mResultReceiver = new AddressResultReceiver (new Handler ());
+                intent.putExtra (Constants.RECEIVER, mResultReceiver);
+                mProgressDialog.show ();
+                startService (intent);
+                return true;
+            }
+        });
     }
+
 
     @Override
     public void onConnected (@Nullable Bundle bundle) {
@@ -133,19 +178,14 @@ public class PracticeLocationHandeling extends AppCompatActivity implements Loca
             if(lastLocation.getLatitude ()==mLastLocation.getLatitude () && lastLocation.getLongitude ()==mLastLocation.getLongitude ())
                 return;
         try {
-            if (googleMap == null) {
-                googleMap = ((MapFragment) getFragmentManager().
-                        findFragmentById(R.id.map)).getMap();
-            }
-            googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-            if(TP!=null)
-                TP.remove ();
-            TP = googleMap.addMarker (new MarkerOptions ().
+            if(marker1 !=null)
+                marker1.remove ();
+            marker1 = googleMap.addMarker (new MarkerOptions ().
                     position (new LatLng (mLastLocation.getLatitude(),mLastLocation.getLongitude())).title("I am here"));
-
+            marker1.setIcon (BitmapDescriptorFactory.fromResource (R.drawable.ic_person_pin_circle_black_48dp));
             CameraUpdate center=
-                    CameraUpdateFactory.newLatLng(TP.getPosition ());
-            CameraUpdate zoom= CameraUpdateFactory.zoomTo (9);
+                    CameraUpdateFactory.newLatLng (marker1.getPosition ());
+            CameraUpdate zoom= CameraUpdateFactory.zoomTo (currentZoom);
 
             googleMap.moveCamera (center);
             googleMap.animateCamera (zoom);
@@ -229,6 +269,29 @@ public class PracticeLocationHandeling extends AppCompatActivity implements Loca
                 break;
         }
         super.onActivityResult (requestCode, resultCode, data);
+    }
+
+
+
+    @SuppressLint ("ParcelCreator")
+    class AddressResultReceiver extends ResultReceiver {
+        public AddressResultReceiver(Handler handler) {
+            super(handler);
+        }
+
+        @Override
+        protected void onReceiveResult(int resultCode, Bundle resultData) {
+
+            // Display the address string
+            // or an error message sent from the intent service.
+            String message = resultData.getString (Constants.RESULT_DATA_KEY);
+            Log.d ("ADDRESS", message);
+            AlertDialog alertDialog = new AlertDialog.Builder(PracticeLocationHandeling.this).create ();
+            alertDialog.setTitle("Address");
+            alertDialog.setMessage (message);
+            mProgressDialog.dismiss ();
+            alertDialog.show ();
+        }
     }
 }
 
