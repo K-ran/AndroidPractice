@@ -25,9 +25,6 @@ public class PracticeFlowingDrawer extends AppCompatActivity {
         if (mMenuFragment == null) {
             fm.beginTransaction().add(R.id.id_container_menu, mMenuFragment = new MyMenuFragment()).commit();
         }
-        mLeftDrawerLayout.setFluidView (mFlowingView);
-        mLeftDrawerLayout.setMenuFragment (mMenuFragment);
-        mMenuFragment = new MyMenuFragment();
         mLeftDrawerLayout.setFluidView(mFlowingView);
         mLeftDrawerLayout.setMenuFragment(mMenuFragment);
     }
