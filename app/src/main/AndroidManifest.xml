@@ -119,6 +119,12 @@
 
         <activity android:name=".MapsPractice.PracticeMaps">
         </activity>
+        <activity android:name=".JsonParsing.PracticeJsonParsing">
+        </activity>
+        <activity android:name=".HttpCallsWithVolley.PracticeHttpCalls">
+        </activity>
+        <activity android:name=".HttpCallWithOkHttp.HttpCallWithOkHttp">
+        </activity>
     </application>
 
 </manifest>

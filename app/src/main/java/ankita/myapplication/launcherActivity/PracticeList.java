@@ -13,9 +13,12 @@ import ankita.myapplication.AsyncTask.PracticeAsyncTask;
 import ankita.myapplication.BroadcastRecieverPratice.PractiveBroadcastReciever;
 import ankita.myapplication.ConnectivityManagerPractice.PracticeConnectivityManager;
 import ankita.myapplication.FlowingDrawer.PracticeFlowingDrawer;
+import ankita.myapplication.HttpCallWithOkHttp.HttpCallWithOkHttp;
+import ankita.myapplication.HttpCallsWithVolley.PracticeHttpCalls;
 import ankita.myapplication.IntentApplicationPractice.PracitceIntentApplication;
 import ankita.myapplication.CustomStylePractice.PracticeCustomStyle;
 import ankita.myapplication.IntentPractice.PracticeImplicitIntent;
+import ankita.myapplication.JsonParsing.PracticeJsonParsing;
 import ankita.myapplication.MapsPractice.PracticeMaps;
 import ankita.myapplication.ServicesPractice.PracticeServices;
 import ankita.myapplication.TabsUsingCustomPager.PracticeTabsUsingCustomPager;
@@ -46,14 +49,16 @@ public class PracticeList extends AppCompatActivity {
                             "Intent Application (Camera)","Sqllite Practice","Fragments","Shared Preferences",
                             "Async Task","Drawables Practice","Ui task 2","Connectvity Manager",
                             "Tabs Practice","Tabs Custom","Navigation Drawer","Flowing Drawer",
-                            "ToolBar Practice","Location handeling ans Maps"," Maps(continue)"};
+                            "ToolBar Practice","Location handeling ans Maps"," Maps(continue)","JsonParsing",
+                            "Http Calls(Volley)","Http Calls(Ok http)"};
     Class[] activities = {PracticeLinearLauoyt.class, PractiveRelativeLayout.class, PractiveFrameLayout.class,PracticeUiControls.class,
                           PracticeCustomListView.class, PracticeGridView.class,PracticeExpandableList.class, PracticeCustomStyle.class,
                           PracticeUiTask1.class, PracticeServices.class, PractiveBroadcastReciever.class, PracticeImplicitIntent.class,
                           PracitceIntentApplication.class, PracticeSqllite.class, PracticeFragment.class, PrecticeSharedPreference.class,
                           PracticeAsyncTask.class, PracticeDrawables.class, PracticeUiTask2.class, PracticeConnectivityManager.class,
                           PracticeTabs.class, PracticeTabsUsingCustomPager.class, PracticeNavigationDrawer.class, PracticeFlowingDrawer.class,
-                          PracticeToolbar.class, PracticeLocationHandeling.class, PracticeMaps.class};
+                          PracticeToolbar.class, PracticeLocationHandeling.class, PracticeMaps.class, PracticeJsonParsing.class,
+                          PracticeHttpCalls.class,HttpCallWithOkHttp.class};
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         // Array of strings...
