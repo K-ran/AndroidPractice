@@ -1,6 +1,7 @@
 package ankita.myapplication.MapsPractice;
 
 import android.graphics.Color;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -104,10 +105,13 @@ public class PracticeMaps extends AppCompatActivity implements Response.ErrorLis
 
     @Override
     public void onResponse (String response) {
+        JSONObject root=null;
+        String distance=null,time=null;
         try {
-            JSONObject root = new JSONObject (response);
+            root = new JSONObject (response);
             JSONArray pointsArray = root.getJSONArray("routes").getJSONObject (0).getJSONArray ("legs").getJSONObject (0).getJSONArray ("steps");
-
+            distance = root.getJSONArray("routes").getJSONObject (0).getJSONArray ("legs").getJSONObject (0).getJSONObject ("distance").getString("text");
+            time = root.getJSONArray("routes").getJSONObject (0).getJSONArray ("legs").getJSONObject (0).getJSONObject ("duration").getString("text");
             for(int i=0;i<pointsArray.length ();i++){
                 JSONObject point = pointsArray.getJSONObject (i);
                 LatLng startPoint = new LatLng (point.getJSONObject ("start_location").getDouble ("lat"),point.getJSONObject ("start_location").getDouble ("lng"));
@@ -121,6 +125,11 @@ public class PracticeMaps extends AppCompatActivity implements Response.ErrorLis
             e.printStackTrace ();
         }
         polyline = googleMap.addPolyline (options);
+        AlertDialog alertDialog = new AlertDialog.Builder(PracticeMaps.this).create ();
+        alertDialog.setTitle ("Informaton");
+        String message = "Total Distance: "+ distance+"\nDuration: "+time+"\nCost (Rs5/km): Rs. "+( Float.parseFloat (distance.split (" ")[0])*5);
+        alertDialog.setMessage (message);
+        alertDialog.show ();
     }
 
     @Override
