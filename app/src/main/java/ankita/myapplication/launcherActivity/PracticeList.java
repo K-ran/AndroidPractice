@@ -25,6 +25,7 @@ import ankita.myapplication.TabsUsingCustomPager.PracticeTabsUsingCustomPager;
 import ankita.myapplication.ToolBarPractice.PracticeToolbar;
 import ankita.myapplication.UiTask1Practice.PracticeUiTask1;
 import ankita.myapplication.UiTask2Practice.PracticeUiTask2;
+import ankita.myapplication.VolleyPostRequest.PracticePostRequest;
 import ankita.myapplication.customList.PracticeCustomListView;
 import ankita.myapplication.drawablesPractice.PracticeDrawables;
 import ankita.myapplication.expandableListViewPractive.PracticeExpandableList;
@@ -50,7 +51,7 @@ public class PracticeList extends AppCompatActivity {
                             "Async Task","Drawables Practice","Ui task 2","Connectvity Manager",
                             "Tabs Practice","Tabs Custom","Navigation Drawer","Flowing Drawer",
                             "ToolBar Practice","Location handeling ans Maps"," Maps(continue)","JsonParsing",
-                            "Http Calls(Volley)","Http Calls(Ok http)"};
+                            "Http Calls(Volley)","Http Calls(Ok http)","PostRequest (Volley)"};
     Class[] activities = {PracticeLinearLauoyt.class, PractiveRelativeLayout.class, PractiveFrameLayout.class,PracticeUiControls.class,
                           PracticeCustomListView.class, PracticeGridView.class,PracticeExpandableList.class, PracticeCustomStyle.class,
                           PracticeUiTask1.class, PracticeServices.class, PractiveBroadcastReciever.class, PracticeImplicitIntent.class,
@@ -58,7 +59,7 @@ public class PracticeList extends AppCompatActivity {
                           PracticeAsyncTask.class, PracticeDrawables.class, PracticeUiTask2.class, PracticeConnectivityManager.class,
                           PracticeTabs.class, PracticeTabsUsingCustomPager.class, PracticeNavigationDrawer.class, PracticeFlowingDrawer.class,
                           PracticeToolbar.class, PracticeLocationHandeling.class, PracticeMaps.class, PracticeJsonParsing.class,
-                          PracticeHttpCalls.class,HttpCallWithOkHttp.class};
+                          PracticeHttpCalls.class,HttpCallWithOkHttp.class, PracticePostRequest.class};
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         // Array of strings...

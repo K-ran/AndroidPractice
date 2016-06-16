@@ -125,6 +125,8 @@
         </activity>
         <activity android:name=".HttpCallWithOkHttp.HttpCallWithOkHttp">
         </activity>
+        <activity android:name=".VolleyPostRequest.PracticePostRequest">
+        </activity>
     </application>
 
 </manifest>
