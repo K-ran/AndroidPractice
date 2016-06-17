@@ -29,6 +29,7 @@ import ankita.myapplication.VolleyPostRequest.PracticePostRequest;
 import ankita.myapplication.customList.PracticeCustomListView;
 import ankita.myapplication.drawablesPractice.PracticeDrawables;
 import ankita.myapplication.expandableListViewPractive.PracticeExpandableList;
+import ankita.myapplication.facebooklogin.PracticeFacebookLogin;
 import ankita.myapplication.fragmentPractice.PracticeFragment;
 import ankita.myapplication.gridViewPractice.PracticeGridView;
 import ankita.myapplication.layoutPractice.PracticeLinearLauoyt;
@@ -51,7 +52,7 @@ public class PracticeList extends AppCompatActivity {
                             "Async Task","Drawables Practice","Ui task 2","Connectvity Manager",
                             "Tabs Practice","Tabs Custom","Navigation Drawer","Flowing Drawer",
                             "ToolBar Practice","Location handeling ans Maps"," Maps(continue)","JsonParsing",
-                            "Http Calls(Volley)","Http Calls(Ok http)","PostRequest (Volley)"};
+                            "Http Calls(Volley)","Http Calls(Ok http)","PostRequest (Volley)","Facebook Login"};
     Class[] activities = {PracticeLinearLauoyt.class, PractiveRelativeLayout.class, PractiveFrameLayout.class,PracticeUiControls.class,
                           PracticeCustomListView.class, PracticeGridView.class,PracticeExpandableList.class, PracticeCustomStyle.class,
                           PracticeUiTask1.class, PracticeServices.class, PractiveBroadcastReciever.class, PracticeImplicitIntent.class,
@@ -59,7 +60,7 @@ public class PracticeList extends AppCompatActivity {
                           PracticeAsyncTask.class, PracticeDrawables.class, PracticeUiTask2.class, PracticeConnectivityManager.class,
                           PracticeTabs.class, PracticeTabsUsingCustomPager.class, PracticeNavigationDrawer.class, PracticeFlowingDrawer.class,
                           PracticeToolbar.class, PracticeLocationHandeling.class, PracticeMaps.class, PracticeJsonParsing.class,
-                          PracticeHttpCalls.class,HttpCallWithOkHttp.class, PracticePostRequest.class};
+                          PracticeHttpCalls.class,HttpCallWithOkHttp.class, PracticePostRequest.class, PracticeFacebookLogin.class};
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         // Array of strings...

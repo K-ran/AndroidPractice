@@ -118,7 +118,6 @@ public class PracticeMaps extends AppCompatActivity implements Response.ErrorLis
                 LatLng endPoint = new LatLng (point.getJSONObject ("end_location").getDouble ("lat"),point.getJSONObject ("start_location").getDouble ("lng"));
                 Log.d("Cool: ", startPoint.toString ()+" : "+endPoint.toString ());
                 options.add (startPoint);
-                options.add (endPoint);
             }
         }
         catch (JSONException e) {
